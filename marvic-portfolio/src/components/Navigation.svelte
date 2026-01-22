@@ -83,10 +83,11 @@
   }
 
   .nav.scrolled {
-    background: rgba(10, 10, 10, 0.95);
+    background: var(--color-surface);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0, 255, 136, 0.1);
+    box-shadow: 0 2px 20px var(--color-shadow);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .container {
@@ -200,11 +201,11 @@
 
     .nav-links {
       position: fixed;
-      top: 80px;
+      top: 70px;
       left: 0;
       right: 0;
       flex-direction: column;
-      background: rgba(10, 10, 10, 0.98);
+      background: var(--color-surface);
       backdrop-filter: blur(10px);
       padding: 2rem;
       gap: 1.5rem;
@@ -227,7 +228,7 @@
       width: 100%;
       flex-direction: column;
       padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid var(--color-border);
     }
   }
 </style>

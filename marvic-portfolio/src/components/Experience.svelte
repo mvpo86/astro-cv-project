@@ -106,7 +106,7 @@
   .experience {
     min-height: 100vh;
     padding: 8rem 2rem;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: var(--color-secondary);
   }
 
   .container {
@@ -153,7 +153,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--color-accent), rgba(0, 255, 136, 0.2));
+    background: linear-gradient(180deg, var(--color-accent), var(--color-border));
   }
 
   .timeline-item {
@@ -187,28 +187,28 @@
     height: 16px;
     background: var(--color-accent);
     border-radius: 50%;
-    border: 3px solid var(--color-bg);
-    box-shadow: 0 0 0 4px rgba(0, 255, 136, 0.2);
+    border: 3px solid var(--color-background);
+    box-shadow: 0 0 0 4px var(--color-border);
     transition: all 0.3s ease;
   }
 
   .timeline-item:hover .marker-dot {
     transform: scale(1.3);
-    box-shadow: 0 0 0 6px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 0 6px var(--color-accent);
   }
 
   .timeline-content {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 2rem;
     transition: all 0.3s ease;
   }
 
   .timeline-content:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: var(--color-accent);
     transform: translateX(5px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+    box-shadow: 0 10px 30px var(--color-shadow);
   }
 
   .content-header {
@@ -234,7 +234,7 @@
 
   .period {
     font-family: var(--font-mono);
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text-muted);
     font-size: 0.9rem;
     white-space: nowrap;
   }
@@ -246,7 +246,7 @@
   }
 
   .responsibilities li {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-muted);
     line-height: 1.8;
     margin-bottom: 0.8rem;
     padding-left: 1.5rem;
@@ -271,10 +271,10 @@
     font-family: var(--font-mono);
     font-size: 0.8rem;
     padding: 0.3rem 0.8rem;
-    background: rgba(0, 255, 136, 0.05);
+    background: var(--color-background);
     color: var(--color-accent);
     border-radius: 4px;
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid var(--color-accent);
   }
 
   @media (max-width: 768px) {

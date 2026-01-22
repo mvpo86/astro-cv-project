@@ -167,8 +167,8 @@
   .filter-btn {
     padding: 0.6rem 1.5rem;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--color-border);
+    color: var(--color-text-muted);
     border-radius: 25px;
     cursor: pointer;
     font-weight: 500;
@@ -195,8 +195,8 @@
   }
 
   .project-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -211,15 +211,15 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent), #00ccff);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
 
   .project-card:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: var(--color-accent);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+    box-shadow: 0 10px 30px var(--color-shadow);
   }
 
   .project-card:hover::before {
@@ -245,7 +245,7 @@
   }
 
   .icon-link {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text-muted);
     transition: all 0.3s ease;
   }
 
@@ -255,7 +255,7 @@
   }
 
   .description {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-muted);
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
@@ -270,10 +270,10 @@
     font-family: var(--font-mono);
     font-size: 0.8rem;
     padding: 0.3rem 0.8rem;
-    background: rgba(0, 255, 136, 0.1);
+    background: var(--color-background);
     color: var(--color-accent);
     border-radius: 4px;
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid var(--color-accent);
   }
 
   @media (max-width: 768px) {

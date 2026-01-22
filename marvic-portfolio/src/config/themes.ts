@@ -64,6 +64,22 @@ export const themes: Record<string, Theme> = {
       shadow: 'rgba(59, 130, 246, 0.1)',
     },
   },
+  'cafe-latte': {
+    id: 'cafe-latte',
+    name: 'Cafe Latte',
+    colors: {
+      primary: '#6B5537',
+      primaryDark: '#4A3A23',
+      secondary: '#F5F0E8',
+      accent: '#A67C52',
+      text: '#2D2116',
+      textMuted: '#6B5537',
+      background: '#FAF7F2',
+      surface: '#F0EBE3',
+      border: '#D9CFC1',
+      shadow: 'rgba(107, 85, 55, 0.15)',
+    },
+  },
 };
 
 export const defaultThemeId = 'cyber-teal';

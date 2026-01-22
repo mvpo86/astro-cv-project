@@ -100,7 +100,7 @@
     height: 200%;
     background: radial-gradient(
       circle at center,
-      rgba(0, 255, 136, 0.15) 0%,
+      var(--color-shadow) 0%,
       transparent 50%
     );
     pointer-events: none;
@@ -155,7 +155,7 @@
     justify-content: center;
     gap: 0.5rem;
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
     opacity: 0;
   }
@@ -186,21 +186,7 @@
   }
 
   .name-text {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #00ccff 50%, var(--color-accent) 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradient 3s ease infinite;
-  }
-
-  @keyframes gradient {
-    0%, 100% {
-      background-position: 0% center;
-    }
-    50% {
-      background-position: 100% center;
-    }
+    color: var(--color-text);
   }
 
   .role-container {
@@ -234,7 +220,7 @@
 
   .description {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-muted);
     line-height: 1.8;
     margin-bottom: 3rem;
     opacity: 0;
@@ -257,7 +243,7 @@
     font-size: 1.05rem;
     transition: all 0.3s ease;
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-background);
     position: relative;
     overflow: hidden;
   }
@@ -282,7 +268,7 @@
 
   .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 10px 40px var(--color-shadow);
   }
 
   .btn-secondary {
@@ -293,7 +279,7 @@
 
   .btn-secondary:hover {
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-background);
     border-color: var(--color-accent);
   }
 
@@ -302,7 +288,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--color-text-muted);
     font-size: 0.9rem;
     animation: fadeInUp 1s ease 1.5s forwards, bounce 2s ease-in-out 2s infinite;
     opacity: 0;
@@ -320,7 +306,7 @@
   .mouse {
     width: 24px;
     height: 38px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid var(--color-border);
     border-radius: 12px;
     position: relative;
   }

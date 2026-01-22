@@ -122,14 +122,14 @@
     font-size: 2rem;
     color: var(--color-text);
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--color-accent), #00ccff);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-content p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-muted);
     line-height: 1.8;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
@@ -140,18 +140,18 @@
     margin-top: 2rem;
     padding: 1rem 2.5rem;
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-background);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 4px 15px var(--color-shadow);
   }
 
   .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 8px 25px var(--color-shadow);
   }
 
   .social-links h4 {
@@ -171,8 +171,8 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     color: var(--color-text);
     text-decoration: none;
@@ -181,7 +181,7 @@
 
   .social-card:hover {
     border-color: var(--color-accent);
-    background: rgba(0, 255, 136, 0.05);
+    background: var(--color-secondary);
     transform: translateX(5px);
   }
 
@@ -193,12 +193,12 @@
   .footer {
     margin-top: 6rem;
     padding-top: 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--color-border);
     text-align: center;
   }
 
   .footer p {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-muted);
     font-size: 0.9rem;
     margin: 0.5rem 0;
   }

@@ -87,7 +87,7 @@
   .about {
     min-height: 100vh;
     padding: 8rem 2rem;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: var(--color-secondary);
   }
 
   .container {
@@ -130,7 +130,7 @@
 
   .bio p {
     margin-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text-muted);
     line-height: 1.8;
     font-size: 1.1rem;
   }
@@ -154,7 +154,7 @@
 
   .interest-tag {
     padding: 0.5rem 1rem;
-    background: rgba(0, 255, 136, 0.1);
+    background: var(--color-surface);
     border: 1px solid var(--color-accent);
     border-radius: 20px;
     font-size: 0.9rem;
@@ -162,7 +162,7 @@
   }
 
   .interest-tag:hover {
-    background: rgba(0, 255, 136, 0.2);
+    background: var(--color-border);
     transform: translateY(-2px);
   }
 
@@ -179,15 +179,15 @@
   }
 
   .skill-item {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--color-surface);
     padding: 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
     transition: all 0.3s ease;
   }
 
   .skill-item:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: var(--color-accent);
     transform: translateX(5px);
   }
 
@@ -210,7 +210,7 @@
 
   .skill-bar {
     height: 6px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-border);
     border-radius: 3px;
     overflow: hidden;
   }
@@ -231,15 +231,15 @@
   }
 
   .education-item {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--color-surface);
     padding: 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
     transition: all 0.3s ease;
   }
 
   .education-item:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: var(--color-accent);
     transform: translateX(5px);
   }
 
@@ -250,7 +250,7 @@
   }
 
   .edu-details {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-muted);
     font-size: 0.9rem;
   }
 
