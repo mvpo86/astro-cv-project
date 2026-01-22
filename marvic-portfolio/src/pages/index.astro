@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.svelte';
+import Hero from '../components/Hero.svelte';
+import About from '../components/About.svelte';
+import Projects from '../components/Projects.svelte';
+import Experience from '../components/Experience.svelte';
+import Contact from '../components/Contact.svelte';
+---
+
+<BaseLayout title="Martin Penabad - Backend Engineer" description="Portfolio of Martin Penabad - Backend Engineer specializing in payment systems and financial infrastructure">
+	<Navigation client:load />
+	<Hero client:load />
+	<About client:visible />
+	<Projects client:visible />
+	<Experience client:visible />
+	<Contact client:visible />
+</BaseLayout>

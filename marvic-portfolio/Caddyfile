@@ -1,0 +1,33 @@
+marvic.io {
+    # Reverse proxy to your Ubuntu workstation
+    # Replace with your Ubuntu workstation's IP or hostname
+    reverse_proxy localhost:3000
+
+    # Enable automatic HTTPS with Let's Encrypt
+    tls {
+        protocols tls1.2 tls1.3
+    }
+
+    # Security headers
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Enable compression
+    encode gzip zstd
+
+    # Logging
+    log {
+        output file /var/log/caddy/marvic.io.log
+        format json
+    }
+}
+
+www.marvic.io {
+    # Redirect www to non-www
+    redir https://marvic.io{uri} permanent
+}
