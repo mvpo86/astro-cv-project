@@ -1,101 +1,60 @@
 <script lang="ts">
+  import { i18n } from '../stores/i18nStore.svelte';
+
   interface ExperienceItem {
     company: string;
-    position: string;
+    translationKey: string;
     period: string;
-    description: string[];
     technologies: string[];
   }
 
   const experiences: ExperienceItem[] = [
     {
       company: 'Mews',
-      position: 'Backend Engineer - Acquiring Team',
+      translationKey: 'mews_acquiring',
       period: 'July 2025 - Present',
-      description: [
-        'Backend engineer working on payment infrastructure and financial services',
-        'Developing enterprise-scale backend systems',
-        'Building secure, reliable financial technology solutions'
-      ],
       technologies: ['C#', '.NET', 'Cloud Infrastructure', 'Microservices']
     },
     {
       company: 'Mews',
-      position: 'Backend Engineer - Payments Team',
+      translationKey: 'mews_payments',
       period: '2022 - July 2025',
-      description: [
-        'Develop secure financial transaction systems and payment processing infrastructure',
-        'Built integrations with global payment gateways for seamless payment operations',
-        'Implemented scalable backend services for the hospitality and travel industry'
-      ],
       technologies: ['C#', '.NET', 'Payment APIs', 'SQL', 'Cloud Services']
     },
     {
       company: 'STK GDC SL (Softtek)',
-      position: '.NET Developer',
+      translationKey: 'softtek_developer',
       period: 'April 2020 - 2022',
-      description: [
-        'Maintained and enhanced fraud detection and compliance systems for UK-based fintech client',
-        'Made improvements to transaction monitoring engine allowing for processing up to 90k transactions a day',
-        'Managed application monitoring, alerting infrastructure, and CI/CD pipelines',
-        'Mentored junior developers through technical discussion and comprehensive code reviews'
-      ],
       technologies: ['C#', '.NET', 'AWS', 'Docker', 'PostgreSQL', 'MSSQL', 'Jenkins', 'Splunk']
     },
     {
       company: 'STK GDC SL (Softtek)',
-      position: 'Application Management Support',
+      translationKey: 'softtek_support',
       period: 'October 2019 - April 2020',
-      description: [
-        'Provided operations support for major Spanish multinational clothing company',
-        'Monitored system health, performance metrics, and service availability',
-        'Streamlined operational processes and implemented KPI reporting with automated alerts'
-      ],
       technologies: ['Monitoring Tools', 'SQL', 'Operations Management', 'KPI Reporting']
     },
     {
       company: 'P-Dub Inc',
-      position: 'Tech Lead / Co-Founder',
+      translationKey: 'pdub',
       period: 'December 2016 - September 2019',
-      description: [
-        'Co-founded and led technical direction for mobile development startup based in Seattle',
-        'Architected and developed cross-platform mobile applications for iOS and Android',
-        'Built gift recommendation platform with backend services and mobile client applications',
-        'Built prototype in iOS and Android to read utility bills with OCR to calculate savings for average households'
-      ],
       technologies: ['Java', 'Kotlin', 'Swift', 'Node.js', 'Azure', 'Firebase', 'MS SQL Server']
     },
     {
       company: 'Zemsania - Everis SL',
-      position: 'Junior Java Developer',
+      translationKey: 'zemsania',
       period: 'May 2016 - November 2019',
-      description: [
-        'Developed custom Java frameworks and applications for Galician Government agencies',
-        'Built healthcare integration services with HL7 messaging standards for public health systems',
-        'Implemented reporting solutions using Jasper Reports and Mirth Connect integration channels'
-      ],
       technologies: ['Java', 'Mirth Connect', 'HL7', 'PostgreSQL', 'MS SQL Server', 'Jasper Reports']
     },
     {
       company: 'Freelance',
-      position: 'Web Developer',
+      translationKey: 'freelance',
       period: 'January 2014 - Present',
-      description: [
-        'Providing PHP web development and WordPress solutions for diverse clients',
-        'Building custom WooCommerce backends and e-commerce solutions',
-        'Developing responsive web applications with modern JavaScript and CSS frameworks'
-      ],
       technologies: ['PHP', 'WordPress', 'JavaScript', 'MySQL', 'HTML/CSS', 'jQuery', 'REST APIs']
     },
     {
       company: 'Plexus Technologies SL',
-      position: 'Junior Java Developer',
+      translationKey: 'plexus',
       period: 'December 2013 - November 2015',
-      description: [
-        'Developed enterprise software for healthcare organizations, government agencies, and private sector',
-        'Built interactive kiosk systems and queue management solutions using Java and Android',
-        'Created digital signage platforms with integrated backend services'
-      ],
       technologies: ['Java', 'JavaScript', 'Android', 'MySQL', 'MS SQL Server', 'CSS']
     }
   ];
@@ -105,7 +64,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-number">03.</span>
-      <h2>Experience</h2>
+      <h2>{i18n.t('experience.title')}</h2>
       <div class="line"></div>
     </div>
 
@@ -119,14 +78,14 @@
           <div class="timeline-content">
             <div class="content-header">
               <div>
-                <h3>{exp.position}</h3>
+                <h3>{i18n.t(`experience.jobs.${exp.translationKey}.position`)}</h3>
                 <h4>{exp.company}</h4>
               </div>
               <span class="period">{exp.period}</span>
             </div>
 
             <ul class="responsibilities">
-              {#each exp.description as desc}
+              {#each i18n.t(`experience.jobs.${exp.translationKey}.description`) as desc}
                 <li>{desc}</li>
               {/each}
             </ul>

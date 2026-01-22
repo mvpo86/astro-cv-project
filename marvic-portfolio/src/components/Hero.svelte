@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { i18n } from '../stores/i18nStore.svelte';
 
   let mounted = $state(false);
   let mouseX = $state(0);
@@ -17,11 +18,11 @@
     return () => window.removeEventListener('mousemove', handleMouseMove);
   });
 
-  const roles = ['Backend Engineer', 'Tech Enthusiast', 'Problem Solver'];
   let currentRole = $state(0);
 
   onMount(() => {
     const interval = setInterval(() => {
+      const roles = i18n.t('hero.roles') as string[];
       currentRole = (currentRole + 1) % roles.length;
     }, 3000);
 
@@ -43,32 +44,31 @@
   <div class="container" class:mounted>
     <div class="greeting">
       <span class="wave">👋</span>
-      <span>Hi, I'm</span>
+      <span>{i18n.t('hero.greeting')}</span>
     </div>
 
     <h1 class="name">
-      <span class="name-text">Martin Penabad</span>
+      <span class="name-text">{i18n.t('hero.name')}</span>
     </h1>
 
     <div class="role-container">
       <p class="role">
         {#key currentRole}
-          <span class="role-text">{roles[currentRole]}</span>
+          <span class="role-text">{(i18n.t('hero.roles') as string[])[currentRole]}</span>
         {/key}
       </p>
     </div>
 
     <p class="description">
-      Building backend systems and payment infrastructure <br />
-      that power seamless financial transactions at scale.
+      {i18n.t('hero.description')}
     </p>
 
     <div class="links">
       <a href="#projects" class="btn" onclick={(e) => scrollToSection(e, '#projects')}>
-        View My Work
+        {i18n.t('hero.viewWork')}
       </a>
       <a href="#contact" class="btn btn-secondary" onclick={(e) => scrollToSection(e, '#contact')}>
-        Let's Talk
+        {i18n.t('hero.letsTalk')}
       </a>
     </div>
 
@@ -76,7 +76,7 @@
       <div class="mouse">
         <div class="wheel"></div>
       </div>
-      <span>Scroll to explore</span>
+      <span>{i18n.t('hero.scrollToExplore')}</span>
     </div>
   </div>
 </section>
@@ -179,7 +179,7 @@
   }
 
   .name {
-    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-size: clamp(3.5rem, 12vw, 5rem);
     font-weight: 800;
     margin: 0 0 1rem 0;
     opacity: 0;

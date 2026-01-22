@@ -1,59 +1,49 @@
 <script lang="ts">
-  const skills = [
-    { name: 'C# / .NET', level: 90, color: '#68217a' },
-    { name: 'Java', level: 85, color: '#f89820' },
-    { name: 'Relational Databases', level: 85, color: '#336791' },
-    { name: 'Swift', level: 80, color: '#fa7343' },
-    { name: 'Android Development', level: 75, color: '#3ddc84' },
-    { name: 'JavaScript', level: 70, color: '#f7df1e' },
-    { name: 'AWS Cloud Services', level: 70, color: '#ff9900' },
-    { name: 'Kotlin', level: 70, color: '#7f52ff' }
-  ];
+  import { i18n } from '../stores/i18nStore.svelte';
 
-  const interests = ['🎮 Game Servers', '🐧 Linux & Homelab', '🤖 AI Exploration'];
+  const skills = [
+    { name: 'C# / .NET', level: 90 },
+    { name: 'Java', level: 85 },
+    { name: 'Relational Databases', level: 85 },
+    { name: 'Swift', level: 80 },
+    { name: 'Android Development', level: 75 },
+    { name: 'JavaScript', level: 70 },
+    { name: 'AWS Cloud Services', level: 70 },
+    { name: 'Kotlin', level: 70 }
+  ];
 </script>
 
 <section id="about" class="about">
   <div class="container">
     <div class="section-header">
       <span class="section-number">01.</span>
-      <h2>About Me</h2>
+      <h2>{i18n.t('about.title')}</h2>
       <div class="line"></div>
     </div>
 
     <div class="content">
       <div class="bio">
         <p class="intro">
-          Hi, I'm <span class="highlight">Martin</span>—a backend engineer passionate about
-          building systems that power the digital economy.
+          {i18n.t('about.introPart1')} <span class="highlight">{i18n.t('about.introPart2')}</span>{i18n.t('about.introPart3')}
         </p>
 
         <p>
-          With over a decade in software development, my journey has taken me from building
-          mobile apps and interactive kiosks to architecting payment infrastructure that
-          processes transactions at scale. Since 2014, I've also been helping businesses grow
-          through freelance web development, crafting custom WordPress solutions and e-commerce
-          platforms. Today, I specialize in backend engineering for fintech, where I design and
-          build the secure, reliable systems that enable seamless financial transactions.
+          {i18n.t('about.paragraph1')}
         </p>
 
         <p>
-          I thrive on tackling complex technical challenges and staying ahead of the curve with
-          emerging technologies. When I'm not engineering payment systems or exploring the latest
-          in AI, you'll find me developing game servers, tinkering with Linux, pushing my physical
-          limits with cross training, or breaking things in my homelab to figure out how they
-          really work.
+          {i18n.t('about.paragraph2')}
         </p>
 
         <div class="interests">
-          {#each interests as interest}
+          {#each i18n.t('about.interests') as interest}
             <span class="interest-tag">{interest}</span>
           {/each}
         </div>
       </div>
 
       <div class="skills">
-        <h3>Technical Skills</h3>
+        <h3>{i18n.t('about.technicalSkills')}</h3>
         <div class="skills-grid">
           {#each skills as skill}
             <div class="skill-item">
@@ -64,27 +54,27 @@
               <div class="skill-bar">
                 <div
                   class="skill-progress"
-                  style="width: {skill.level}%; background: {skill.color};"
+                  style="width: {skill.level}%;"
                 ></div>
               </div>
             </div>
           {/each}
         </div>
 
-        <h3 style="margin-top: 3rem;">Education & Languages</h3>
+        <h3 style="margin-top: 3rem;">{i18n.t('about.educationLanguages')}</h3>
         <div class="education">
           <div class="education-item">
-            <div class="edu-title">Certificate in Advanced Java Programming</div>
-            <div class="edu-details">Fundación Confemetal • 212 hours • 2013</div>
+            <div class="edu-title">{i18n.t('about.education.cert1Title')}</div>
+            <div class="edu-details">{i18n.t('about.education.cert1Details')}</div>
           </div>
           <div class="education-item">
-            <div class="edu-title">Software Development (CFGS)</div>
-            <div class="edu-details">San Clemente • Santiago de Compostela, Spain • 2013</div>
+            <div class="edu-title">{i18n.t('about.education.cert2Title')}</div>
+            <div class="edu-details">{i18n.t('about.education.cert2Details')}</div>
           </div>
           <div class="education-item">
-            <div class="edu-title">Languages</div>
+            <div class="edu-title">{i18n.t('about.education.languagesTitle')}</div>
             <div class="edu-details">
-              English & Spanish (Native) • Galician (Working) • Portuguese (Conversational)
+              {i18n.t('about.education.languagesDetails')}
             </div>
           </div>
         </div>
@@ -228,8 +218,9 @@
   .skill-progress {
     height: 100%;
     border-radius: 3px;
+    background: var(--color-primary);
     transition: width 1s ease;
-    box-shadow: 0 0 10px currentColor;
+    box-shadow: 0 0 10px var(--color-primary);
   }
 
   .education {

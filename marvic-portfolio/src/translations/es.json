@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Martin Penabad",
+    "roles": [
+      "Ingeniero Backend",
+      "Entusiasta de la Tecnología",
+      "Solucionador de Problemas"
+    ],
+    "description": "Construyendo sistemas backend e infraestructura de pagos que impulsan transacciones financieras fluidas a escala.",
+    "viewWork": "Ver Mi Trabajo",
+    "letsTalk": "Hablemos",
+    "scrollToExplore": "Desplázate para explorar"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "introPart1": "Hola, soy",
+    "introPart2": "Martin",
+    "introPart3": "—un ingeniero backend apasionado por construir sistemas que impulsan la economía digital.",
+    "paragraph1": "Con más de una década en desarrollo de software, mi trayectoria me ha llevado desde la creación de aplicaciones móviles y quioscos interactivos hasta el diseño de infraestructura de pagos que procesa transacciones a escala. Desde 2014, también he ayudado a empresas a crecer a través del desarrollo web freelance, creando soluciones personalizadas de WordPress y plataformas de comercio electrónico. Hoy, me especializo en ingeniería backend para fintech, donde diseño y construyo los sistemas seguros y confiables que permiten transacciones financieras fluidas.",
+    "paragraph2": "Me motiva enfrentar desafíos técnicos complejos y mantenerme a la vanguardia con las tecnologías emergentes. Cuando no estoy diseñando sistemas de pago o explorando lo último en IA, me encontrarás desarrollando servidores de juegos, experimentando con Linux, superando mis límites físicos con cross training, o rompiendo cosas en mi homelab para entender cómo funcionan realmente.",
+    "interests": [
+      "🎮 Servidores de Juegos",
+      "🐧 Linux & Homelab",
+      "🤖 Exploración de IA"
+    ],
+    "technicalSkills": "Habilidades Técnicas",
+    "educationLanguages": "Educación e Idiomas",
+    "education": {
+      "cert1Title": "Certificado en Programación Avanzada en Java",
+      "cert1Details": "Fundación Confemetal • 212 horas • 2013",
+      "cert2Title": "Desarrollo de Aplicaciones Informáticas (CFGS)",
+      "cert2Details": "San Clemente • Santiago de Compostela, España • 2013",
+      "languagesTitle": "Idiomas",
+      "languagesDetails": "Inglés y Español (Nativo) • Gallego (Profesional) • Portugués (Conversacional)"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "filters": {
+      "all": "todos",
+      "fullstack": "fullstack",
+      "frontend": "frontend",
+      "backend": "backend"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": {
+      "mews_acquiring": {
+        "position": "Ingeniero Backend - Equipo de Adquisiciones",
+        "description": [
+          "Ingeniero backend trabajando en infraestructura de pagos y servicios financieros",
+          "Desarrollando sistemas backend a escala empresarial",
+          "Construyendo soluciones de tecnología financiera seguras y confiables"
+        ]
+      },
+      "mews_payments": {
+        "position": "Ingeniero Backend - Equipo de Pagos",
+        "description": [
+          "Desarrollo de sistemas de transacciones financieras seguras e infraestructura de procesamiento de pagos",
+          "Construcción de integraciones con pasarelas de pago globales para operaciones de pago fluidas",
+          "Implementación de servicios backend escalables para la industria de hospitalidad y viajes"
+        ]
+      },
+      "softtek_developer": {
+        "position": "Desarrollador .NET",
+        "description": [
+          "Mantenimiento y mejora de sistemas de detección de fraude y cumplimiento para cliente fintech del Reino Unido",
+          "Mejoras al motor de monitoreo de transacciones permitiendo procesar hasta 90k transacciones por día",
+          "Gestión de monitoreo de aplicaciones, infraestructura de alertas y pipelines CI/CD",
+          "Mentoría de desarrolladores junior a través de discusiones técnicas y revisiones exhaustivas de código"
+        ]
+      },
+      "softtek_support": {
+        "position": "Soporte de Gestión de Aplicaciones",
+        "description": [
+          "Soporte de operaciones para importante empresa multinacional española de ropa",
+          "Monitoreo de salud del sistema, métricas de rendimiento y disponibilidad de servicios",
+          "Optimización de procesos operativos e implementación de informes KPI con alertas automatizadas"
+        ]
+      },
+      "pdub": {
+        "position": "Líder Técnico / Cofundador",
+        "description": [
+          "Cofundación y liderazgo de la dirección técnica de startup de desarrollo móvil con sede en Seattle",
+          "Arquitectura y desarrollo de aplicaciones móviles multiplataforma para iOS y Android",
+          "Construcción de plataforma de recomendación de regalos con servicios backend y aplicaciones cliente móvil",
+          "Construcción de prototipo en iOS y Android para leer facturas de servicios con OCR y calcular ahorros para hogares promedio"
+        ]
+      },
+      "zemsania": {
+        "position": "Desarrollador Junior Java",
+        "description": [
+          "Desarrollo de frameworks Java personalizados y aplicaciones para agencias del Gobierno Gallego",
+          "Construcción de servicios de integración sanitaria con estándares de mensajería HL7 para sistemas de salud pública",
+          "Implementación de soluciones de informes usando Jasper Reports y canales de integración Mirth Connect"
+        ]
+      },
+      "freelance": {
+        "position": "Desarrollador Web",
+        "description": [
+          "Provisión de desarrollo web PHP y soluciones WordPress para clientes diversos",
+          "Construcción de backends WooCommerce personalizados y soluciones de comercio electrónico",
+          "Desarrollo de aplicaciones web responsivas con frameworks modernos de JavaScript y CSS"
+        ]
+      },
+      "plexus": {
+        "position": "Desarrollador Junior Java",
+        "description": [
+          "Desarrollo de software empresarial para organizaciones de salud, agencias gubernamentales y sector privado",
+          "Construcción de sistemas de quioscos interactivos y soluciones de gestión de colas usando Java y Android",
+          "Creación de plataformas de señalización digital con servicios backend integrados"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "heading": "Construyamos Algo Increíble Juntos",
+    "description": "Siempre estoy interesado en conocer nuevos proyectos y oportunidades. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡no dudes en contactarme!",
+    "sayHello": "Di Hola",
+    "findMeOnline": "Encuéntrame en línea",
+    "footerBuiltWith": "Hecho con",
+    "footerUsing": "usando Astro & Svelte",
+    "copyright": "© 2026 Martin Penabad. Todos los derechos reservados."
+  }
+}

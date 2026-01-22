@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { i18n } from '../stores/i18nStore.svelte';
+
   interface Project {
     title: string;
     description: string;
@@ -60,7 +62,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-number">02.</span>
-      <h2>Projects</h2>
+      <h2>{i18n.t('projects.title')}</h2>
       <div class="line"></div>
     </div>
 
@@ -71,7 +73,7 @@
           class:active={activeFilter === filter}
           onclick={() => activeFilter = filter}
         >
-          {filter}
+          {i18n.t(`projects.filters.${filter}`)}
         </button>
       {/each}
     </div>

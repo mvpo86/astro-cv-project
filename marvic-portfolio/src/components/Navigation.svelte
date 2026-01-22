@@ -1,5 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { i18n } from '../stores/i18nStore.svelte';
+  import ThemeSwitcher from './ThemeSwitcher.svelte';
+  import LanguageSwitcher from './LanguageSwitcher.svelte';
 
   let scrolled = $state(false);
   let mobileMenuOpen = $state(false);
@@ -14,10 +17,10 @@
   });
 
   const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#about', key: 'nav.about' },
+    { href: '#projects', key: 'nav.projects' },
+    { href: '#experience', key: 'nav.experience' },
+    { href: '#contact', key: 'nav.contact' }
   ];
 
   function handleNavClick(e: Event) {
@@ -55,10 +58,14 @@
       {#each navItems as item}
         <li>
           <a href={item.href} onclick={handleNavClick}>
-            {item.label}
+            {i18n.t(item.key)}
           </a>
         </li>
       {/each}
+      <li class="nav-controls">
+        <LanguageSwitcher />
+        <ThemeSwitcher />
+      </li>
     </ul>
   </div>
 </nav>
@@ -146,10 +153,17 @@
 
   .nav-links {
     display: flex;
+    align-items: center;
     gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .nav-links a {
@@ -207,6 +221,13 @@
 
     .nav-links a {
       font-size: 1.2rem;
+    }
+
+    .nav-controls {
+      width: 100%;
+      flex-direction: column;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
   }
 </style>

@@ -16,6 +16,63 @@ const { title, description = "Portfolio of Marvic" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- Theme initialization script to prevent flash -->
+    <script is:inline>
+      (function() {
+        const themeId = localStorage.getItem('theme-preference') || 'cyber-teal';
+        const locale = localStorage.getItem('locale-preference') || 'en';
+
+        const themes = {
+          'cyber-teal': {
+            primary: '#00d9ff',
+            primaryDark: '#00a8cc',
+            secondary: '#0a1628',
+            accent: '#00ffaa',
+            text: '#e0e0e0',
+            textMuted: '#a0a0a0',
+            background: '#0a0e1a',
+            surface: '#131b2e',
+            border: '#1e293b',
+            shadow: 'rgba(0, 217, 255, 0.1)',
+          },
+          'neon-purple': {
+            primary: '#c77dff',
+            primaryDark: '#9d4edd',
+            secondary: '#1a0a28',
+            accent: '#ff006e',
+            text: '#e0e0e0',
+            textMuted: '#a0a0a0',
+            background: '#0f0a1a',
+            surface: '#1e1333',
+            border: '#2b1e3b',
+            shadow: 'rgba(199, 125, 255, 0.1)',
+          },
+          'electric-blue': {
+            primary: '#3b82f6',
+            primaryDark: '#2563eb',
+            secondary: '#0a1628',
+            accent: '#10b981',
+            text: '#e0e0e0',
+            textMuted: '#a0a0a0',
+            background: '#0a0e1a',
+            surface: '#131b2e',
+            border: '#1e293b',
+            shadow: 'rgba(59, 130, 246, 0.1)',
+          },
+        };
+
+        const theme = themes[themeId] || themes['cyber-teal'];
+        const root = document.documentElement;
+
+        Object.entries(theme).forEach(([key, value]) => {
+          const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+          root.style.setProperty(`--color-${cssKey}`, value);
+        });
+
+        root.lang = locale;
+      })();
+    </script>
   </head>
   <body>
     <slot />
@@ -24,12 +81,31 @@ const { title, description = "Portfolio of Marvic" } = Astro.props;
 
 <style is:global>
   :root {
-    --color-bg: #0f0f0f;
-    --color-text: #e5e7eb;
-    --color-accent: #5eead4;
-    --color-accent-secondary: #7dd3fc;
+    /* Theme colors - initialized by inline script */
+    --color-primary: #00d9ff;
+    --color-primary-dark: #00a8cc;
+    --color-secondary: #0a1628;
+    --color-accent: #00ffaa;
+    --color-text: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    --color-background: #0a0e1a;
+    --color-surface: #131b2e;
+    --color-border: #1e293b;
+    --color-shadow: rgba(0, 217, 255, 0.1);
+
+    /* Legacy color variables for backward compatibility */
+    --color-bg: var(--color-background);
+
+    /* Fonts */
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
+
+    /* Theme transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
 
   * {
@@ -40,7 +116,7 @@ const { title, description = "Portfolio of Marvic" } = Astro.props;
 
   html {
     font-family: var(--font-sans);
-    background: var(--color-bg);
+    background: var(--color-background);
     color: var(--color-text);
     scroll-behavior: smooth;
   }
@@ -57,26 +133,26 @@ const { title, description = "Portfolio of Marvic" } = Astro.props;
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--color-bg);
+    background: var(--color-background);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-accent);
+    background: var(--color-primary);
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-accent-secondary);
+    background: var(--color-primary-dark);
   }
 
   /* Selection */
   ::selection {
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-background);
   }
 
   ::-moz-selection {
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-background);
   }
 </style>

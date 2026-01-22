@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { i18n } from '../stores/i18nStore.svelte';
+
   interface Social {
     name: string;
     url: string;
@@ -18,24 +20,23 @@
   <div class="container">
     <div class="section-header">
       <span class="section-number">04.</span>
-      <h2>Get In Touch</h2>
+      <h2>{i18n.t('contact.title')}</h2>
       <div class="line"></div>
     </div>
 
     <div class="content">
       <div class="text-content">
-        <h3>Let's Build Something Amazing Together</h3>
+        <h3>{i18n.t('contact.heading')}</h3>
         <p>
-          I'm always interested in hearing about new projects and opportunities.
-          Whether you have a question or just want to say hi, feel free to reach out!
+          {i18n.t('contact.description')}
         </p>
         <a href="mailto:martin.penabad@gmail.com" class="cta-button">
-          Say Hello
+          {i18n.t('contact.sayHello')}
         </a>
       </div>
 
       <div class="social-links">
-        <h4>Find me online</h4>
+        <h4>{i18n.t('contact.findMeOnline')}</h4>
         <div class="socials-grid">
           {#each socials as social}
             <a
@@ -63,8 +64,8 @@
   </div>
 
   <footer class="footer">
-    <p>Built with <span class="heart">♥</span> using Astro & Svelte</p>
-    <p class="copyright">© 2026 Martin Penabad. All rights reserved.</p>
+    <p>{i18n.t('contact.footerBuiltWith')} <span class="heart">♥</span> {i18n.t('contact.footerUsing')}</p>
+    <p class="copyright">{i18n.t('contact.copyright')}</p>
   </footer>
 </section>
 
@@ -203,7 +204,7 @@
   }
 
   .heart {
-    color: #ff006e;
+    color: var(--color-accent);
     animation: pulse 1.5s ease infinite;
   }
 

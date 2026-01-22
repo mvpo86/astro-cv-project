@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Martin Penabad",
+    "roles": [
+      "Backend Engineer",
+      "Tech Enthusiast",
+      "Problem Solver"
+    ],
+    "description": "Building backend systems and payment infrastructure that power seamless financial transactions at scale.",
+    "viewWork": "View My Work",
+    "letsTalk": "Let's Talk",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "introPart1": "Hi, I'm",
+    "introPart2": "Martin",
+    "introPart3": "—a backend engineer passionate about building systems that power the digital economy.",
+    "paragraph1": "With over a decade in software development, my journey has taken me from building mobile apps and interactive kiosks to architecting payment infrastructure that processes transactions at scale. Since 2014, I've also been helping businesses grow through freelance web development, crafting custom WordPress solutions and e-commerce platforms. Today, I specialize in backend engineering for fintech, where I design and build the secure, reliable systems that enable seamless financial transactions.",
+    "paragraph2": "I thrive on tackling complex technical challenges and staying ahead of the curve with emerging technologies. When I'm not engineering payment systems or exploring the latest in AI, you'll find me developing game servers, tinkering with Linux, pushing my physical limits with cross training, or breaking things in my homelab to figure out how they really work.",
+    "interests": [
+      "🎮 Game Servers",
+      "🐧 Linux & Homelab",
+      "🤖 AI Exploration"
+    ],
+    "technicalSkills": "Technical Skills",
+    "educationLanguages": "Education & Languages",
+    "education": {
+      "cert1Title": "Certificate in Advanced Java Programming",
+      "cert1Details": "Fundación Confemetal • 212 hours • 2013",
+      "cert2Title": "Software Development (CFGS)",
+      "cert2Details": "San Clemente • Santiago de Compostela, Spain • 2013",
+      "languagesTitle": "Languages",
+      "languagesDetails": "English & Spanish (Native) • Galician (Working) • Portuguese (Conversational)"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "filters": {
+      "all": "all",
+      "fullstack": "fullstack",
+      "frontend": "frontend",
+      "backend": "backend"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": {
+      "mews_acquiring": {
+        "position": "Backend Engineer - Acquiring Team",
+        "description": [
+          "Backend engineer working on payment infrastructure and financial services",
+          "Developing enterprise-scale backend systems",
+          "Building secure, reliable financial technology solutions"
+        ]
+      },
+      "mews_payments": {
+        "position": "Backend Engineer - Payments Team",
+        "description": [
+          "Develop secure financial transaction systems and payment processing infrastructure",
+          "Built integrations with global payment gateways for seamless payment operations",
+          "Implemented scalable backend services for the hospitality and travel industry"
+        ]
+      },
+      "softtek_developer": {
+        "position": ".NET Developer",
+        "description": [
+          "Maintained and enhanced fraud detection and compliance systems for UK-based fintech client",
+          "Made improvements to transaction monitoring engine allowing for processing up to 90k transactions a day",
+          "Managed application monitoring, alerting infrastructure, and CI/CD pipelines",
+          "Mentored junior developers through technical discussion and comprehensive code reviews"
+        ]
+      },
+      "softtek_support": {
+        "position": "Application Management Support",
+        "description": [
+          "Provided operations support for major Spanish multinational clothing company",
+          "Monitored system health, performance metrics, and service availability",
+          "Streamlined operational processes and implemented KPI reporting with automated alerts"
+        ]
+      },
+      "pdub": {
+        "position": "Tech Lead / Co-Founder",
+        "description": [
+          "Co-founded and led technical direction for mobile development startup based in Seattle",
+          "Architected and developed cross-platform mobile applications for iOS and Android",
+          "Built gift recommendation platform with backend services and mobile client applications",
+          "Built prototype in iOS and Android to read utility bills with OCR to calculate savings for average households"
+        ]
+      },
+      "zemsania": {
+        "position": "Junior Java Developer",
+        "description": [
+          "Developed custom Java frameworks and applications for Galician Government agencies",
+          "Built healthcare integration services with HL7 messaging standards for public health systems",
+          "Implemented reporting solutions using Jasper Reports and Mirth Connect integration channels"
+        ]
+      },
+      "freelance": {
+        "position": "Web Developer",
+        "description": [
+          "Providing PHP web development and WordPress solutions for diverse clients",
+          "Building custom WooCommerce backends and e-commerce solutions",
+          "Developing responsive web applications with modern JavaScript and CSS frameworks"
+        ]
+      },
+      "plexus": {
+        "position": "Junior Java Developer",
+        "description": [
+          "Developed enterprise software for healthcare organizations, government agencies, and private sector",
+          "Built interactive kiosk systems and queue management solutions using Java and Android",
+          "Created digital signage platforms with integrated backend services"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "heading": "Let's Build Something Amazing Together",
+    "description": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    "sayHello": "Say Hello",
+    "findMeOnline": "Find me online",
+    "footerBuiltWith": "Built with",
+    "footerUsing": "using Astro & Svelte",
+    "copyright": "© 2026 Martin Penabad. All rights reserved."
+  }
+}
