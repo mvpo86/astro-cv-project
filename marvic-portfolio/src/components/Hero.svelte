@@ -179,7 +179,7 @@
   }
 
   .name {
-    font-size: clamp(3.5rem, 12vw, 5rem);
+    font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 800;
     margin: 0 0 1rem 0;
     opacity: 0;
